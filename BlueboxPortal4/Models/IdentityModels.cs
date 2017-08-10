@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 
 namespace BlueboxPortal4.Models
 {
@@ -16,6 +17,8 @@ namespace BlueboxPortal4.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public virtual ICollection<Airline> Airline { get; set; }
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -29,5 +32,7 @@ namespace BlueboxPortal4.Models
         {
             return new ApplicationDbContext();
         }
+
+        //public System.Data.Entity.DbSet<BlueboxPortal4.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
