@@ -46,4 +46,15 @@ namespace BlueboxPortal4.Models
 
         public DbSet<Airline> Airline { get; set; }
     }
+
+    public class UserAirline
+    {
+        [Key]
+        public int UserAirlineId { get; set; }
+
+        public virtual Airline Airline { get; set; }
+
+        public virtual ApplicationUser ApplicationUser { get; set; }
+
+    }
 }
