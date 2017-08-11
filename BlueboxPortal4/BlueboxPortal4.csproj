@@ -189,7 +189,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AirlineController.cs" />
+    <Compile Include="Controllers\AirlinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -199,13 +199,13 @@
     <Compile Include="Migrations\201708101216018_InitialCreate.Designer.cs">
       <DependentUpon>201708101216018_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708101345027_AirlineModels.cs" />
-    <Compile Include="Migrations\201708101345027_AirlineModels.Designer.cs">
-      <DependentUpon>201708101345027_AirlineModels.cs</DependentUpon>
+    <Compile Include="Migrations\201708111045174_IdentityModels.cs" />
+    <Compile Include="Migrations\201708111045174_IdentityModels.Designer.cs">
+      <DependentUpon>201708111045174_IdentityModels.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708110920257_IdentityModels.cs" />
-    <Compile Include="Migrations\201708110920257_IdentityModels.Designer.cs">
-      <DependentUpon>201708110920257_IdentityModels.cs</DependentUpon>
+    <Compile Include="Migrations\201708111046258_AirlineModels.cs" />
+    <Compile Include="Migrations\201708111046258_AirlineModels.Designer.cs">
+      <DependentUpon>201708111046258_AirlineModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -272,7 +272,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Airline\Create.cshtml" />
+    <Content Include="Views\Airlines\Create.cshtml" />
+    <Content Include="Views\Airlines\Delete.cshtml" />
+    <Content Include="Views\Airlines\Details.cshtml" />
+    <Content Include="Views\Airlines\Edit.cshtml" />
+    <Content Include="Views\Airlines\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -296,11 +300,11 @@
     <EmbeddedResource Include="Migrations\201708101216018_InitialCreate.resx">
       <DependentUpon>201708101216018_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708101345027_AirlineModels.resx">
-      <DependentUpon>201708101345027_AirlineModels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708111045174_IdentityModels.resx">
+      <DependentUpon>201708111045174_IdentityModels.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708110920257_IdentityModels.resx">
-      <DependentUpon>201708110920257_IdentityModels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708111046258_AirlineModels.resx">
+      <DependentUpon>201708111046258_AirlineModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

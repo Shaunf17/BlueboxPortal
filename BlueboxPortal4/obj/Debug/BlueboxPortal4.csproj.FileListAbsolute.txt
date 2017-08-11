@@ -96,5 +96,5 @@ C:\Users\sfalconer\documents\visual studio 2017\Projects\BlueboxPortal4\BlueboxP
 C:\Users\sfalconer\documents\visual studio 2017\Projects\BlueboxPortal4\BlueboxPortal4\obj\Debug\BlueboxPortal4.pdb
 C:\Users\sfalconer\documents\visual studio 2017\Projects\BlueboxPortal4\BlueboxPortal4\obj\Debug\BlueboxPortal4.Migrations.InitialCreate.resources
 C:\Users\sfalconer\documents\visual studio 2017\Projects\BlueboxPortal4\BlueboxPortal4\obj\Debug\BlueboxPortal4.csproj.GenerateResource.Cache
-C:\Users\sfalconer\documents\visual studio 2017\Projects\BlueboxPortal4\BlueboxPortal4\obj\Debug\BlueboxPortal4.Migrations.AirlineModels.resources
 C:\Users\sfalconer\documents\visual studio 2017\Projects\BlueboxPortal4\BlueboxPortal4\obj\Debug\BlueboxPortal4.Migrations.IdentityModels.resources
+C:\Users\sfalconer\documents\visual studio 2017\Projects\BlueboxPortal4\BlueboxPortal4\obj\Debug\BlueboxPortal4.Migrations.AirlineModels.resources

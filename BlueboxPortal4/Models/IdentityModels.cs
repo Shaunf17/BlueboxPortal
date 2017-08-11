@@ -17,7 +17,8 @@ namespace BlueboxPortal4.Models
             // Add custom user claims here
             return userIdentity;
         }
-        public virtual ICollection<Airline> Airline { get; set; }
+        //public virtual ICollection<Airline> Airline { get; set; }
+        //public virtual ICollection<UserAirline> UserAirline { get; set; }
 
     }
 
@@ -34,6 +35,8 @@ namespace BlueboxPortal4.Models
         }
 
         public System.Data.Entity.DbSet<BlueboxPortal4.Models.Airline> Airlines { get; set; }
+
+        //public System.Data.Entity.DbSet<BlueboxPortal4.Models.Airline> Airlines { get; set; }
 
         //public System.Data.Entity.DbSet<BlueboxPortal4.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
