@@ -13,7 +13,7 @@ namespace BlueboxPortal4.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201708101346177_IdentityModels"; }
+            get { return "201708110920257_IdentityModels"; }
         }
         
         string IMigrationMetadata.Source

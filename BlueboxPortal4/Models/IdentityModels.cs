@@ -33,6 +33,8 @@ namespace BlueboxPortal4.Models
             return new ApplicationDbContext();
         }
 
+        public System.Data.Entity.DbSet<BlueboxPortal4.Models.Airline> Airlines { get; set; }
+
         //public System.Data.Entity.DbSet<BlueboxPortal4.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

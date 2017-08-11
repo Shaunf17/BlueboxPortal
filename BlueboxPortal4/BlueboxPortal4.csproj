@@ -203,9 +203,9 @@
     <Compile Include="Migrations\201708101345027_AirlineModels.Designer.cs">
       <DependentUpon>201708101345027_AirlineModels.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708101346177_IdentityModels.cs" />
-    <Compile Include="Migrations\201708101346177_IdentityModels.Designer.cs">
-      <DependentUpon>201708101346177_IdentityModels.cs</DependentUpon>
+    <Compile Include="Migrations\201708110920257_IdentityModels.cs" />
+    <Compile Include="Migrations\201708110920257_IdentityModels.Designer.cs">
+      <DependentUpon>201708110920257_IdentityModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -272,10 +272,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Airline\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Airline\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -299,8 +299,8 @@
     <EmbeddedResource Include="Migrations\201708101345027_AirlineModels.resx">
       <DependentUpon>201708101345027_AirlineModels.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708101346177_IdentityModels.resx">
-      <DependentUpon>201708101346177_IdentityModels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708110920257_IdentityModels.resx">
+      <DependentUpon>201708110920257_IdentityModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

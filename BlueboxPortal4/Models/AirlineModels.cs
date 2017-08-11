@@ -30,7 +30,7 @@ namespace BlueboxPortal4.Models
         [Display(Name = "SSRS Folder")]
         public string SSRSFolder { get; set; }
 
-        public virtual ICollection<ApplicationUser> ApplicationUser { get; set; }
+        public virtual ICollection<UserAirline> UserAirline { get; set; }
 
         public IEnumerable<Airline> getAirlines
         {
