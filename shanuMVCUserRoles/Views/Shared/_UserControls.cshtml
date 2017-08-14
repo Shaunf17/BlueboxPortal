@@ -1,0 +1,11 @@
+﻿@using Microsoft.AspNet.Identity
+
+@if (Request.IsAuthenticated)
+{
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-left">
+        <li>Users</li>
+        <li>Airlines</li>
+    </ul>
+}

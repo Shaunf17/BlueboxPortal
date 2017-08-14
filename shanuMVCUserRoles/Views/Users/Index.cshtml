@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+@if (ViewBag.displayMenu == "Yes")
+{
+    <div class="container">
+        <h1>Welcome Admin. Now you can create user Role.</h1>
+    </div>
+    <h3>
+        <li>@Html.ActionLink("Manage Role", "Index", "Role")</li>
+    </h3>
+}
+else
+{
+    <div class="content-section-a" style="min-height:80%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" style="padding-top:2%;">
+                    <h2>Hello @ViewBag.Name :)</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    if (true) { <div>hello</div>}
+}
+
