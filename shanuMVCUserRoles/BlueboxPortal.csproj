@@ -188,6 +188,10 @@
     <Compile Include="Migrations\201708141256205_AirlineModel.Designer.cs">
       <DependentUpon>201708141256205_AirlineModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708141506474_AirlineId.cs" />
+    <Compile Include="Migrations\201708141506474_AirlineId.Designer.cs">
+      <DependentUpon>201708141506474_AirlineId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AirlineModels.cs" />
@@ -325,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708141256205_AirlineModel.resx">
       <DependentUpon>201708141256205_AirlineModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141506474_AirlineId.resx">
+      <DependentUpon>201708141506474_AirlineId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

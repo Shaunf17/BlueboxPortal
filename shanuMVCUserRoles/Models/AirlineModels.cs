@@ -10,7 +10,7 @@ namespace BlueboxPortal.Models
     public class Airline
     {
         [Key]
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Name")]
         public string Name { get; set; }
