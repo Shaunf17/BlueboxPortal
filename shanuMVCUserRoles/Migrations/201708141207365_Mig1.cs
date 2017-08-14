@@ -1,4 +1,4 @@
-namespace shanuMVCUserRoles.Migrations
+namespace BlueboxPortal.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
@@ -7,8 +7,8 @@ namespace shanuMVCUserRoles.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.AspNetUsers", "FirstName", c => c.String());
-            AddColumn("dbo.AspNetUsers", "LastName", c => c.String());
+            //AddColumn("dbo.AspNetUsers", "FirstName", c => c.String());
+            //AddColumn("dbo.AspNetUsers", "LastName", c => c.String());
         }
         
         public override void Down()

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace shanuMVCUserRoles
+namespace BlueboxPortal
 {
 	public class FilterConfig
 	{

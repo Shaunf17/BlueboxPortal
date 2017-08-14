@@ -1,4 +1,4 @@
-namespace shanuMVCUserRoles.Migrations
+namespace BlueboxPortal.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
@@ -7,7 +7,7 @@ namespace shanuMVCUserRoles.Migrations
     {
         public override void Up()
         {
-            CreateTable(
+            /*CreateTable(
                 "dbo.AspNetRoles",
                 c => new
                     {
@@ -73,7 +73,7 @@ namespace shanuMVCUserRoles.Migrations
                     })
                 .PrimaryKey(t => new { t.LoginProvider, t.ProviderKey, t.UserId })
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
-                .Index(t => t.UserId);
+                .Index(t => t.UserId);*/
             
         }
         

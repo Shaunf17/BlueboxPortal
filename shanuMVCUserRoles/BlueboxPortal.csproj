@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>shanuMVCUserRoles</RootNamespace>
-    <AssemblyName>shanuMVCUserRoles</AssemblyName>
+    <RootNamespace>BlueboxPortal</RootNamespace>
+    <AssemblyName>BlueboxPortal</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AirlinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -183,8 +184,13 @@
     <Compile Include="Migrations\201708141207365_Mig1.Designer.cs">
       <DependentUpon>201708141207365_Mig1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708141256205_AirlineModel.cs" />
+    <Compile Include="Migrations\201708141256205_AirlineModel.Designer.cs">
+      <DependentUpon>201708141256205_AirlineModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AirlineModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -291,8 +297,13 @@
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\Role\Create.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\Account\LandingPage.cshtml" />
+    <Content Include="Views\Users\LandingPage.cshtml" />
     <Content Include="Views\Shared\_UserControls.cshtml" />
+    <Content Include="Views\Airlines\Create.cshtml" />
+    <Content Include="Views\Airlines\Delete.cshtml" />
+    <Content Include="Views\Airlines\Details.cshtml" />
+    <Content Include="Views\Airlines\Edit.cshtml" />
+    <Content Include="Views\Airlines\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -311,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708141207365_Mig1.resx">
       <DependentUpon>201708141207365_Mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141256205_AirlineModel.resx">
+      <DependentUpon>201708141256205_AirlineModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

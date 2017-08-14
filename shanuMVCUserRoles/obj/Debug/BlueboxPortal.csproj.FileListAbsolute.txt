@@ -10,9 +10,6 @@ C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuM
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\roslyn\vbc.exe
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\roslyn\VBCSCompiler.exe
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\shanuMVCUserRoles.dll.config
-C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\shanuMVCUserRoles.dll
-C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\shanuMVCUserRoles.pdb
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\Antlr3.Runtime.dll
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\EntityFramework.dll
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\EntityFramework.SqlServer.dll
@@ -64,9 +61,13 @@ C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuM
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.dll
-C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.pdb
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.csprojResolveAssemblyReference.cache
-C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.InitialCreate.resources
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.csproj.GenerateResource.Cache
-C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.Mig1.resources
+C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.Migrations.InitialCreate.resources
+C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.Migrations.Mig1.resources
+C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\BlueboxPortal.dll.config
+C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\BlueboxPortal.dll
+C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\bin\BlueboxPortal.pdb
+C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.dll
+C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.pdb
+C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.Migrations.AirlineModel.resources

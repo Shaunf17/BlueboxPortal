@@ -6,10 +6,10 @@ using System.Web.Mvc;
 using System.Security.Claims;
 using System.Web.Security;
 using Microsoft.AspNet.Identity;
-using shanuMVCUserRoles.Models;
+using BlueboxPortal.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace shanuMVCUserRoles.Controllers
+namespace BlueboxPortal.Controllers
 {
 	[Authorize]
 	public class UsersController : Controller
@@ -62,5 +62,12 @@ namespace shanuMVCUserRoles.Controllers
 
 
 		}
-	}
+
+        //GET: /Account/LandingPage
+        [Authorize]
+        public ActionResult LandingPage()
+        {
+            return View();
+        }
+    }
 }

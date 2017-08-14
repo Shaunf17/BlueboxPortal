@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using shanuMVCUserRoles.Models;
+using BlueboxPortal.Models;
 
-namespace shanuMVCUserRoles.Controllers
+namespace BlueboxPortal.Controllers
 {
     [Authorize]
     public class AccountController : Controller
@@ -179,14 +179,6 @@ namespace shanuMVCUserRoles.Controllers
 			// If we got this far, something failed, redisplay form
 			return View(model);
 		}
-
-        //GET: /Account/LandingPage
-        [Authorize]
-        public ActionResult LandingPage()
-        {
-            return View();
-        }
-
 
         //
         // GET: /Account/ConfirmEmail

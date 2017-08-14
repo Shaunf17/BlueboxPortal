@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace shanuMVCUserRoles.Models
+namespace BlueboxPortal.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

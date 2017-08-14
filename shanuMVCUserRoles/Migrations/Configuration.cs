@@ -1,19 +1,19 @@
-namespace shanuMVCUserRoles.Migrations
+namespace BlueboxPortal.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<shanuMVCUserRoles.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<BlueboxPortal.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "shanuMVCUserRoles.Models.ApplicationDbContext";
+            ContextKey = "BlueboxPortal.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(shanuMVCUserRoles.Models.ApplicationDbContext context)
+        protected override void Seed(BlueboxPortal.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

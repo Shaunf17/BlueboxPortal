@@ -7,13 +7,13 @@ namespace BlueboxPortal.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Mig1 : IMigrationMetadata
+    public sealed partial class AirlineModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Mig1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AirlineModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201708141207365_Mig1"; }
+            get { return "201708141256205_AirlineModel"; }
         }
         
         string IMigrationMetadata.Source

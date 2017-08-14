@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.Security;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
-using shanuMVCUserRoles.Models;
+using BlueboxPortal.Models;
 
-namespace shanuMVCUserRoles.Controllers
+namespace BlueboxPortal.Controllers
 {
 	public class HomeController : Controller
 	{

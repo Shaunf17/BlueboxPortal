@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
-using shanuMVCUserRoles.Models;
+using BlueboxPortal.Models;
 using Owin;
 using System.Security.Claims;
 
-[assembly: OwinStartupAttribute(typeof(shanuMVCUserRoles.Startup))]
-namespace shanuMVCUserRoles
+[assembly: OwinStartupAttribute(typeof(BlueboxPortal.Startup))]
+namespace BlueboxPortal
 {
     public partial class Startup
     {
