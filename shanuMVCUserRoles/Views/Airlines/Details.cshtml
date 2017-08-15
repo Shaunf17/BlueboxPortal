@@ -5,9 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
-
 <div>
+    <h2>Details</h2>
     <h4>Airline</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -60,8 +59,21 @@
         </dd>
 
     </dl>
+
+    @*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
+
+    <div class="btn-group">
+        <a href=@Url.Action("Edit","Airlines", new { id = Model.Id }) class="btn btn-default btn-sm"><i class="fa fa-edit fa-fw"></i> <span style="color:green;" class="network-name">Edit</span></a>
+        <a href=@Url.Action("Delete","Airlines", new { id = Model.Id }) class="btn btn-default btn-sm"><i class="fa fa-trash fa-fw"></i> <span style="color:darkred;" class="network-name">Delete</span></a>
+
+    </div>
+
+    <div style="padding-top:30px;">
+        <a href=@Url.Action("Index", "Airlines") class="btn btn-default btn-sm"><i class="fa fa-angle-double-left fa-fw"></i><span class="network-name">Back To List</span></a>
+    </div>
+
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+

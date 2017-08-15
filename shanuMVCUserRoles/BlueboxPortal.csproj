@@ -171,6 +171,7 @@
     <Compile Include="Controllers\AirlinesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -300,18 +301,19 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\Role\Create.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\Users\LandingPage.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\LandingPage.cshtml" />
     <Content Include="Views\Shared\_UserControls.cshtml" />
     <Content Include="Views\Airlines\Create.cshtml" />
     <Content Include="Views\Airlines\Delete.cshtml" />
     <Content Include="Views\Airlines\Details.cshtml" />
     <Content Include="Views\Airlines\Edit.cshtml" />
+    <Content Include="Views\Airlines\IndexOld.cshtml" />
     <Content Include="Views\Airlines\Index.cshtml" />
-    <Content Include="Views\Airlines\IndexNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Users\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

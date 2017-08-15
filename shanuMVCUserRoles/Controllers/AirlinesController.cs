@@ -64,7 +64,7 @@ namespace BlueboxPortal.Controllers
         }
 
         // GET: Airlines/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -95,7 +95,7 @@ namespace BlueboxPortal.Controllers
         }
 
         // GET: Airlines/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -112,7 +112,7 @@ namespace BlueboxPortal.Controllers
         // POST: Airlines/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int? id)
         {
             Airline airline = db.Airline.Find(id);
             db.Airline.Remove(airline);

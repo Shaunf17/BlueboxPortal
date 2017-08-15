@@ -81,7 +81,7 @@ namespace BlueboxPortal.Controllers
             {
                 case SignInStatus.Success:
                     //return RedirectToLocal(returnUrl);
-                    return RedirectToAction("LandingPage");
+                    return RedirectToAction("LandingPage", "Profile");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
