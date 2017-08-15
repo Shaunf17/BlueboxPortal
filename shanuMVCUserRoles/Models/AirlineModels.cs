@@ -32,10 +32,10 @@ namespace BlueboxPortal.Models
 
         //public virtual ICollection<UserAirline> UserAirline { get; set; }
 
-        //public IEnumerable<Airline> getAirlines
-        //{
-        //    get { return getAirlines.OrderBy(a => a.Name); }
-        //}
+        public IEnumerable<Airline> getAirlines
+        {
+            get { return getAirlines.OrderBy(a => a.Name); }
+        }
     }
 
     //public class AirlineContext : DbContext

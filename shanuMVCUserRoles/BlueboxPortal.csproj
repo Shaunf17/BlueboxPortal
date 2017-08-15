@@ -308,6 +308,7 @@
     <Content Include="Views\Airlines\Details.cshtml" />
     <Content Include="Views\Airlines\Edit.cshtml" />
     <Content Include="Views\Airlines\Index.cshtml" />
+    <Content Include="Views\Airlines\IndexNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

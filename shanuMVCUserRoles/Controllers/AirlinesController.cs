@@ -17,6 +17,11 @@ namespace BlueboxPortal.Controllers
         // GET: Airlines
         public ActionResult Index()
         {
+            return View(db.Airline.ToList());                   //RIP Benny Harvey
+        }
+
+        public ActionResult IndexNew()
+        {
             return View(db.Airline.ToList());
         }
 
