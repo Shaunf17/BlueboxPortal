@@ -68,6 +68,10 @@ namespace BlueboxPortal.Models
 		[Display(Name = "User Roles")]
 		public string UserRoles { get; set; }
 
+        [Required]
+        [Display(Name = "Airline")]
+        public string Airline { get; set; }
+
         //[Required]
         //[Display(Name = "Full Name")]
         //public string FullName { get; set; }

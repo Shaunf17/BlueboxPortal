@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BlueboxPortal.Models;
+using System.Collections.Generic;
 
 namespace BlueboxPortal.Controllers
 {
@@ -143,7 +144,11 @@ namespace BlueboxPortal.Controllers
         {
 			ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
 											.ToList(), "Name", "Name");
-			return View();
+
+            ViewBag.Airline = new SelectList(context.Airline
+                                          .ToList(), "Name", "Name");
+
+            return View();
         }
 
         //
@@ -168,12 +173,17 @@ namespace BlueboxPortal.Controllers
 					// await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 					//Assign Role to user Here   
 					await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
-					//Ends Here 
-					return RedirectToAction("Index", "Users");
+                    //Ends Here 
+                    ViewBag.Test = model.Airline;
+					//return RedirectToAction("Index", "Profile");
 				}
 				ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
 										  .ToList(), "Name", "Name");
-				AddErrors(result);
+
+                ViewBag.Airline = new SelectList(context.Airline
+                                          .ToList(), "Name", "Name");
+
+                AddErrors(result);
 			}
 
 			// If we got this far, something failed, redisplay form

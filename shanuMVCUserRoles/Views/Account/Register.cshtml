@@ -4,6 +4,7 @@
 }
 
 <h2>@ViewBag.Title.</h2>
+<h2>Airline: @ViewBag.Test</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
@@ -58,6 +59,15 @@
         <div class="col-md-10">
             @*@Html.DropDownList("Name")*@
             @Html.DropDownList("UserRoles", (SelectList)ViewBag.Name, " ")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Airline, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownList("Airline", (SelectList)ViewBag.Airline, " ")
+            @*@Html.DropDownListFor(m => m.Airline, (SelectList)ViewBag.Airline, " ")*@
+            @*@Html.DropDownList("Airline", (SelectList)ViewBag.Airline, " ")*@            
         </div>
     </div>
 

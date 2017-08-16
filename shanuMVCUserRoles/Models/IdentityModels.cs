@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using BlueboxPortal.Models;
+using System.Collections.Generic;
 
 namespace BlueboxPortal.Models
 {
@@ -19,6 +20,8 @@ namespace BlueboxPortal.Models
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public virtual ICollection<Airline> Airline { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -34,5 +37,8 @@ namespace BlueboxPortal.Models
         {
             return new ApplicationDbContext();
         }
+
+        //public System.Data.Entity.DbSet<BlueboxPortal.Models.ApplicationUser> ApplicationUsers { get; set; }
+
     }
 }

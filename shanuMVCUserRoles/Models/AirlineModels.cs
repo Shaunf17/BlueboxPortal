@@ -30,13 +30,30 @@ namespace BlueboxPortal.Models
         [Display(Name = "SSRS Folder")]
         public string SSRSFolder { get; set; }
 
-        //public virtual ICollection<UserAirline> UserAirline { get; set; }
+        public virtual ICollection<ApplicationUser> ApplicationUser { get; set; }
+
+        //public virtual ICollection<UserAirlines> UserAirlines { get; set; }
 
         public IEnumerable<Airline> getAirlines
         {
             get { return getAirlines.OrderBy(a => a.Name); }
         }
+
     }
+
+    //public class UserAirlines
+    //{
+    //    public int Id { get; set; }
+
+    //    public string UserId { get; set; }
+
+    //    public int AirlineId { get; set; }
+
+    //    public virtual ApplicationUser ApplicationUser { get; set; }
+    //    public virtual Airline Airline { get; set; }
+    //}
+
+
 
     //public class AirlineContext : DbContext
     //{
@@ -45,16 +62,5 @@ namespace BlueboxPortal.Models
     //    }
 
     //    public DbSet<Airline> Airline { get; set; }
-    //}
-
-    //public class UserAirline
-    //{
-    //    [Key]
-    //    public int UserAirlineId { get; set; }
-
-    //    public virtual Airline Airline { get; set; }
-
-    //    public virtual ApplicationUser ApplicationUser { get; set; }
-
     //}
 }

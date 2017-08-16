@@ -173,7 +173,6 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,6 +191,10 @@
     <Compile Include="Migrations\201708141506474_AirlineId.cs" />
     <Compile Include="Migrations\201708141506474_AirlineId.Designer.cs">
       <DependentUpon>201708141506474_AirlineId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708160925189_ICollection.cs" />
+    <Compile Include="Migrations\201708160925189_ICollection.Designer.cs">
+      <DependentUpon>201708160925189_ICollection.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -313,7 +316,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Users\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -335,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708141506474_AirlineId.resx">
       <DependentUpon>201708141506474_AirlineId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708160925189_ICollection.resx">
+      <DependentUpon>201708160925189_ICollection.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
