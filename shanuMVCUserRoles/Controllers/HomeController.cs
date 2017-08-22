@@ -13,6 +13,13 @@ namespace BlueboxPortal.Controllers
 	{
 		public ActionResult Index()
 		{
+            var pdbm = new PortalDBModel();
+            pdbm.populateServiceRuns();
+            var temp = pdbm.Airlines.First().FriendlyName;
+            var temp2 = pdbm.ServiceRuns.First().airline.FriendlyName;
+
+            var airlineService = pdbm.getServiceRunForAirline(pdbm.Airlines.First());
+
             var userRole = User.Identity.AuthenticationType;
             ViewBag.UserName = User.IsInRole("Admin");
 			return View();

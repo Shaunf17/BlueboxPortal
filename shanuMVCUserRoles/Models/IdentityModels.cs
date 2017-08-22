@@ -22,6 +22,11 @@ namespace BlueboxPortal.Models
         public string LastName { get; set; }
 
         public virtual ICollection<Airline> Airline { get; set; }
+
+        public IEnumerable<ApplicationUser> getUsers
+        {
+            get { return getUsers; }
+        }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -37,6 +42,39 @@ namespace BlueboxPortal.Models
         {
             return new ApplicationDbContext();
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuidler)
+        {
+            modelBuidler.Entity<ApplicationUser>()
+                .HasMany(t => t.Airline)
+                .WithMany(t => t.ApplicationUser)
+                .Map(m =>
+                {
+                    m.ToTable("ApplicationUserAirlines");
+                    m.MapLeftKey("UserId");
+                    m.MapRightKey("AirlineId");
+                });
+
+            base.OnModelCreating(modelBuidler);
+        }
+
+        //public System.Data.Entity.DbSet<BlueboxPortal.Models.ApplicationUser> ApplicationUsers { get; set; }
+
+
+
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<ApplicationUser>()
+        //        .HasMany(al => al.Airline)
+        //        .WithMany(au => au.ApplicationUser)
+        //        .Map(
+        //        m =>
+        //        {
+        //            m.MapLeftKey("ApplicationUser_Id");
+        //            m.MapRightKey("Airline_Id");
+        //            m.ToTable("ApplicationUserAirlines");
+        //        });
+        //}
 
         //public System.Data.Entity.DbSet<BlueboxPortal.Models.ApplicationUser> ApplicationUsers { get; set; }
 

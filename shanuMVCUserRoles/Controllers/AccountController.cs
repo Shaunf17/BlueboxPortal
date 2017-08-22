@@ -55,6 +55,14 @@ namespace BlueboxPortal.Controllers
         }
 
         //
+        // GET: /Account/Index
+        [Authorize]
+        public ActionResult Index()
+        {
+            return View(context);
+        }
+
+        //
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
@@ -174,8 +182,9 @@ namespace BlueboxPortal.Controllers
 					//Assign Role to user Here   
 					await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
                     //Ends Here 
-                    ViewBag.Test = model.Airline;
-					//return RedirectToAction("Index", "Profile");
+                    
+                    //ViewBag.Test = model.Airline;
+					return RedirectToAction("Index", "Profile");
 				}
 				ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
 										  .ToList(), "Name", "Name");

@@ -73,3 +73,4 @@ C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuM
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.Migrations.AirlineModel.resources
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.Migrations.AirlineId.resources
 C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.Migrations.ICollection.resources
+C:\Users\sfalconer\Documents\Visual Studio 2017\Projects\BlueboxPortalNew\shanuMVCUserRoles\obj\Debug\BlueboxPortal.Migrations.ModelCreation.resources

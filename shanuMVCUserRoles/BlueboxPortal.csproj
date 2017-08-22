@@ -196,11 +196,17 @@
     <Compile Include="Migrations\201708160925189_ICollection.Designer.cs">
       <DependentUpon>201708160925189_ICollection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708212015449_ModelCreation.cs" />
+    <Compile Include="Migrations\201708212015449_ModelCreation.Designer.cs">
+      <DependentUpon>201708212015449_ModelCreation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AirlineModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PortalDBModel.cs" />
+    <Compile Include="Models\ServiceRun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -313,6 +319,8 @@
     <Content Include="Views\Airlines\Edit.cshtml" />
     <Content Include="Views\Airlines\IndexOld.cshtml" />
     <Content Include="Views\Airlines\Index.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Airlines\TestGrid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -340,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708160925189_ICollection.resx">
       <DependentUpon>201708160925189_ICollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708212015449_ModelCreation.resx">
+      <DependentUpon>201708212015449_ModelCreation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

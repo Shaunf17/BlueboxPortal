@@ -13,16 +13,18 @@ namespace BlueboxPortal.Controllers
     public class AirlinesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        private PortalDBModel pdbm = new PortalDBModel();
 
         // GET: Airlines
         public ActionResult Index()
         {
-            return View(db.Airline.ToList());                   //RIP Benny Harvey
+            return View(db.Airline.ToList());
         }
 
-        public ActionResult IndexNew()
+        // GET: Airlines/TestGrid
+        public ActionResult TestGrid()
         {
-            return View(db.Airline.ToList());
+            return View(pdbm);
         }
 
         // GET: Airlines/Details/5

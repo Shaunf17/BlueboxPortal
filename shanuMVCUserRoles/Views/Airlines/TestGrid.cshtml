@@ -1,0 +1,79 @@
+﻿@using BlueboxPortal.Models
+@using BlueboxPortal.Controllers
+@model BlueboxPortal.Models.PortalDBModel
+
+@{
+    ViewBag.Title = "IndexNew";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="margin: 0 10% 10% 0">
+
+    <h2>Airlines</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+    <hr />
+
+    @{
+        PortalDBModel p = new PortalDBModel();
+        p.populateServiceRuns();
+    }
+
+    @foreach (var item in Model.Airlines)
+    {
+        <a href="@Url.Action("Details", "Airlines", new { id = item.Id })">
+            <div class="airline-box">
+                @*@Html.ActionLink(item.Name, "Details", new { id = item.Id })*@
+                <h3>@item.Name</h3>
+                <hr />
+                <p>Last Import: @p.getServiceRunForAirline(item).Start</p>
+            </div>
+        </a>
+    }
+</div>
+
+@*@{
+        ViewBag.Title = "TestGrid";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <div style="margin: 0 10% 10% 0">
+
+        <h2>Airlines</h2>
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+
+        <hr />
+
+        @{
+            PortalDBModel p = new PortalDBModel();
+            p.populateServiceRuns();
+        }
+
+        @foreach(var item in Model.Airlines)
+        {
+            <h3>@item.Name</h3>
+            @*<p>@p.getServiceRunForAirline(item)</p>
+<p>@p.getServiceRunForAirline(item).Start</p>
+    }
+
+</div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+

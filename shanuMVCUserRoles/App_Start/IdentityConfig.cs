@@ -84,8 +84,14 @@ namespace BlueboxPortal
                 manager.UserTokenProvider = 
                     new DataProtectorTokenProvider<ApplicationUser>(dataProtectionProvider.Create("ASP.NET Identity"));
             }
+
             return manager;
         }
+
+        //public static ApplicationUserManager AsignAirline(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context)
+        //{
+        //    return
+        //}
     }
 
     // Configure the application sign-in manager which is used in this application.
