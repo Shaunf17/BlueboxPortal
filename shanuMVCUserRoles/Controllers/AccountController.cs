@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BlueboxPortal.Models;
 using System.Collections.Generic;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BlueboxPortal.Controllers
 {
@@ -18,11 +19,14 @@ namespace BlueboxPortal.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private RoleManager<IdentityRole> roleManager;
 		ApplicationDbContext context;
+
 		public AccountController()
         {
 			context = new ApplicationDbContext();
-		}
+            roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+        }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
@@ -59,7 +63,43 @@ namespace BlueboxPortal.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            return View(context);
+            var employeeRole = (from r in context.Roles where r.Name.Contains("Employee") select r).FirstOrDefault();
+            var users = context.Users.Where(x => x.Roles.Select(y => y.RoleId).Contains(employeeRole.Id)).ToList();
+
+            var userVM = users.Select(user => new UserViewModel
+            {
+                Username = user.UserName,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Role = "Employee"
+            }).ToList();
+
+            var managerRole = (from r in context.Roles where r.Name.Contains("Manager") select r).FirstOrDefault();
+            var manager = context.Users.Where(x => x.Roles.Select(y => y.RoleId).Contains(managerRole.Id)).ToList();
+
+            var managerVM = manager.Select(user => new UserViewModel
+            {
+                Username = user.UserName,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Role = "Manager"
+            }).ToList();
+
+            var adminRole = (from r in context.Roles where r.Name.Contains("Admin") select r).FirstOrDefault();
+            var admin = context.Users.Where(x => x.Roles.Select(y => y.RoleId).Contains(adminRole.Id)).ToList();
+
+            var adminVM = admin.Select(user => new UserViewModel
+            {
+                Username = user.UserName,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Role = "Admin"
+            }).ToList();
+
+
+            var model = new GroupedUserViewModel { Users = userVM, Admins = adminVM, Managers = managerVM };
+            return View(model);
+            //return View(UserManager.Users.ToList());
         }
 
         //

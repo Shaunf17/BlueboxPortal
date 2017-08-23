@@ -1,4 +1,5 @@
-﻿@model BlueboxPortal.Models.Airline
+﻿@model BlueboxPortal.Models.DetailsViewModel
+@*@model BlueboxPortal.Models.PortalDBModel*@
 
 @{
     ViewBag.Title = "Details";
@@ -11,51 +12,116 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @*@Html.DisplayNameFor(model => model.Name)*@
+            @Html.DisplayNameFor(model => model.Airline.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Airline.Name)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NameAlias)
+            @Html.DisplayNameFor(model => model.Airline.NameAlias)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.NameAlias)
+            @Html.DisplayFor(model => model.Airline.NameAlias)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FriendlyName)
+            @Html.DisplayNameFor(model => model.Airline.FriendlyName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FriendlyName)
+            @Html.DisplayFor(model => model.Airline.FriendlyName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DisplayName)
+            @Html.DisplayNameFor(model => model.Airline.DisplayName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DisplayName)
+            @Html.DisplayFor(model => model.Airline.DisplayName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DbName)
+            @Html.DisplayNameFor(model => model.Airline.DbName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DbName)
+            @Html.DisplayFor(model => model.Airline.DbName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SSRSFolder)
+            @Html.DisplayNameFor(model => model.Airline.SSRSFolder)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SSRSFolder)
+            @Html.DisplayFor(model => model.Airline.SSRSFolder)
+        </dd>
+
+    </dl>
+
+    @{
+        var p = Model.PortalDBModel.getServiceRunForAirline(Model.Airline);
+    }
+
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Name)*@
+            Start Time:
+        </dt>
+
+        <dd>
+            @p.Start
+        </dd>
+
+        <dt>
+            End Time:
+        </dt>
+
+        <dd>
+            @p.End
+        </dd>
+
+        <dt>
+            New Files Processed: 
+        </dt>
+
+        <dd>
+            @p.NewFiles
+        </dd>
+
+        <dt>
+            Duplicate Files:
+        </dt>
+
+        <dd>
+            @p.DuplicateFiles
+        </dd>
+
+        <dt>
+            Unique Devices:
+        </dt>
+
+        <dd>
+            @p.UniqueDevices
+        </dd>
+
+        <dt>
+            New Devices: 
+        </dt>
+
+        <dd>
+            @p.NewDevices
+        </dd>
+
+        <dt>
+            CDR Count:
+        </dt>
+
+        <dd>
+            @p.CDRCount
         </dd>
 
     </dl>
@@ -66,8 +132,8 @@
     </p>*@
 
     <div class="btn-group">
-        <a href=@Url.Action("Edit","Airlines", new { id = Model.Id }) class="btn btn-default btn-sm"><i class="fa fa-edit fa-fw"></i> <span style="color:green;" class="network-name">Edit</span></a>
-        <a href=@Url.Action("Delete","Airlines", new { id = Model.Id }) class="btn btn-default btn-sm"><i class="fa fa-trash fa-fw"></i> <span style="color:darkred;" class="network-name">Delete</span></a>
+        <a href=@Url.Action("Edit","Airlines", new { id = Model.Airline.Id }) class="btn btn-default btn-sm"><i class="fa fa-edit fa-fw"></i> <span style="color:green;" class="network-name">Edit</span></a>
+        <a href=@Url.Action("Delete","Airlines", new { id = Model.Airline.Id }) class="btn btn-default btn-sm"><i class="fa fa-trash fa-fw"></i> <span style="color:darkred;" class="network-name">Delete</span></a>
 
     </div>
 

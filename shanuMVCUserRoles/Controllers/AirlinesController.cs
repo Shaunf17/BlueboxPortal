@@ -15,6 +15,10 @@ namespace BlueboxPortal.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
         private PortalDBModel pdbm = new PortalDBModel();
 
+        public AirlinesController()
+        {
+        }
+
         // GET: Airlines
         public ActionResult Index()
         {
@@ -27,19 +31,43 @@ namespace BlueboxPortal.Controllers
             return View(pdbm);
         }
 
-        // GET: Airlines/Details/5
-        public ActionResult Details(int? id)
+        //// GET: Airlines/Details/5
+        //public ActionResult Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Airline airline = db.Airline.Find(id);
+        //    if (airline == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(airline);
+        //}
+
+        // GET: Airlines/Details/5 --NEW TEST--
+        public ActionResult Details(int? id, PortalDBModel report)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Airline airline = db.Airline.Find(id);
+            //Airline airline = db.Airline.Find(id);
+
+            Airline airline = pdbm.Airlines.Find(a => a.Id == id);
+            //pdbm.populateServiceRuns();
+
+            DetailsViewModel vm = new DetailsViewModel();
+
+            vm.Airline = airline;
+            vm.PortalDBModel = pdbm;
+
             if (airline == null)
             {
                 return HttpNotFound();
             }
-            return View(airline);
+            return View(vm);
         }
 
         // GET: Airlines/Create

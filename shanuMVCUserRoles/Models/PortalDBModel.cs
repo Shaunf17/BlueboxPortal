@@ -20,6 +20,8 @@ namespace BlueboxPortal.Models
             //Airlines = new List<Airline>();
             Airlines = db.Airline.ToList();
             ServiceRuns = new List<ServiceRun>();
+
+            populateServiceRuns();
         }
 
         public void populateServiceRuns()
@@ -55,5 +57,11 @@ namespace BlueboxPortal.Models
             }
             return null;
         }
+    }
+
+    public class DetailsViewModel
+    {
+        public Airline Airline { get; set; }
+        public PortalDBModel PortalDBModel { get; set; }
     }
 }

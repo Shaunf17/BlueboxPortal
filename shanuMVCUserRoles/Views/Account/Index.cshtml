@@ -1,5 +1,4 @@
-﻿@model BlueboxPortal.Models.ApplicationDbContext
-@*@model IEnumerable<BlueboxPortal.Models.IndexViewModel>*@
+﻿@model BlueboxPortal.Models.GroupedUserViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -12,109 +11,247 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
+<div style="margin-right:10%;">
+    <div id="Tabs" role="tabpanel">
+        <!--Nav tabs-->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active">
+                <a href="#Tab1" aria-controls="Tab1" role="tab" data-toggle="tab">
+                    Employees
+                </a>
+            </li>
+            <li>
+                <a href="#Tab2" aria-controls="Tab2" role="tab" data-toggle="tab">
+                    Managers
+                </a>
+            </li>
+            <li>
+                <a href="#Tab3" aria-controls="Tab3" role="tab" data-toggle="tab">
+                    Admins
+                </a>
+            </li>
+        </ul>
+        <!--Tab Panes-->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="Tab1">
+                <table class="table">
+                    <tr style="background-color:#91b9ff;">
+                        <th>
+                            Username
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                    </tr>
+                    @foreach (var employee in Model.Users)
+                    {
+                        <tr>
+                            <td>
+                                @employee.Username
+                            </td>
+                            <td>
+                                @employee.FirstName
+                            </td>
+                            <td>
+                                @employee.LastName
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Tab2">
+                <table class="table">
+                    <tr style="background-color:#91b9ff;">
+                        <th>
+                            Username
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                    </tr>
+                    @foreach (var manager in Model.Managers)
+                    {
+                        <tr>
+                            <td>
+                                @manager.Username
+                            </td>
+                            <td>
+                                @manager.FirstName
+                            </td>
+                            <td>
+                                @manager.LastName
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Tab3">
+                <table class="table">
+                    <tr style="background-color:#91b9ff;">
+                        <th>
+                            Username
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                    </tr>
+                    @foreach (var admin in Model.Admins)
+                    {
+                        <tr>
+                            <td>
+                                @admin.Username
+                            </td>
+                            <td>
+                                @admin.FirstName
+                            </td>
+                            <td>
+                                @admin.LastName
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+@*<h1>Admins</h1>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Users.First().FirstName)
+            Username
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
         </th>
     </tr>
-
-    @*@foreach(var item in Model)
+    @foreach (var admin in Model.Admins)
     {
-
-    }*@
+        <tr>
+            <td>
+                @admin.Username
+            </td>
+            <td>
+                @admin.FirstName
+            </td>
+            <td>
+                @admin.LastName
+            </td>
+        </tr>
+    }
 </table>
+
+<h1>Managers</h1>
+<table class="table">
+    <tr>
+        <th>
+            Username
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+    </tr>
+    @foreach (var manager in Model.Managers)
+    {
+        <tr>
+            <td>
+                @manager.Username
+            </td>
+            <td>
+                @manager.FirstName
+            </td>
+            <td>
+                @manager.LastName
+            </td>
+        </tr>
+    }
+</table>
+
+<h1>Employees</h1>
+<table class="table">
+    <tr>
+        <th>
+            Username
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+    </tr>
+    @foreach (var employee in Model.Users)
+    {
+        <tr>
+            <td>
+                @employee.Username
+            </td>
+            <td>
+                @employee.FirstName
+            </td>
+            <td>
+                @employee.LastName
+            </td>
+        </tr>
+    }
+</table>*@
+
+
+<!---------------------------------------->
+
+
+@*<div class="row">
+    <h4>Users</h4>
+    @foreach (var user in Model.Users)
+    {
+        <p>
+            <strong>
+                @user.Username | @user.Role
+            </strong>
+        </p>
+    }
+    <h4>Managers</h4>
+    @foreach (var userm in Model.Managers)
+    {
+        <p>
+            <strong>
+                @userm.Username | @userm.Role
+            </strong>
+        </p>
+    }
+    <h4>Admins</h4>
+    @foreach (var usera in Model.Admins)
+    {
+        <p>
+            <strong>
+                @usera.Username | @usera.Role
+            </strong>
+        </p>
+    }    
+</div>*@
+
+
 @*<table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            @Html.DisplayNameFor(model => model.Users)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EmailConfirmed)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PasswordHash)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SecurityStamp)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TwoFactorEnabled)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LockoutEndDateUtc)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LockoutEnabled)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccessFailedCount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserName)
-        </th>
-        <th></th>
     </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EmailConfirmed)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PasswordHash)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SecurityStamp)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNumberConfirmed)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TwoFactorEnabled)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LockoutEndDateUtc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LockoutEnabled)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccessFailedCount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
 </table>*@
